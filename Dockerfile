@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . /app
 
-RUN python -m install pip && pip install requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 CMD ["python", "src/app.py"]
